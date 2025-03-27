@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="rag-pinecone-gamesdk",
     version="0.1.0",
-    packages=find_packages(),
+    packages=find_packages(include=['game_sdk', 'game_sdk.*']),
     install_requires=[
         "pinecone-client>=2.2.1",
         "langchain>=0.0.267",
@@ -24,7 +24,4 @@ setup(
         "gdown",
     ],
     python_requires=">=3.9",
-) 
-
-
-#python -m spacy download en_core_web_sm
+)
